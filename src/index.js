@@ -3,11 +3,23 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import "bootstrap/dist/css/bootstrap.min.css"
+import UiApp from './UiApp'
+import Lister from './Lister';
+import ListerB from './Lister';
+import Recipe from './Recipe';
+import { ListProvider } from './context/ListContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
-    <App />
+    <ListProvider>
+    {/* <App /> */}
+    <ListerB />
+    {/* <Recipe /> */}
+    {/* UiApp */}
+    </ListProvider>
   </React.StrictMode>
 );
 
